@@ -1,0 +1,11 @@
+cbb20=read.table("cbb20.csv", header=TRUE, sep = ",")
+Winner<-function(var1, var2){
+standings = read.csv("cbb20.csv", header=TRUE, sep=",")
+attach(cbb20)
+net.lm=lm(EFG_O~TOR+X3P_O)
+comparsiontable=cbind(cbb20, lmfit$fitted.values)
+teamnames=c("Kansas", "Baylor", "Gonzaga”, “Dayton”, “Michigan St.”, “Duke”, “Creighton”, “Ohio St.”, “Louisville”, “San Diego St.”, “Villanova”, “Houston”, “Arizona”, “Michigan”, “Penn St.”, “West Virginia”, “BYU”, “Oregon”, “Wisconsin”, “Florida St.”, “Seton Hall”, “Texas Tech”, “Purdue”, “Butler”, “Providence”, “Maryland”, “Minnesota”, “Kentucky”, “Illinois”, “Rutgers”, “Iowa”, “Florida”, “Marquette”, “Virginia”, “Wichita St.”, “Indiana”, “Oklahoma”, “Utah St.”, “Auburn”, “Xavier”, “Saint Marys”, “Colorado”, “LSU”, “Syracuse”, “Stanford”, “North Carolina St.”, “Cincinnati”, “Richmond”, “Mississippi St.”, “Saint Louis”, “Georgia Tech”, “Arkansas”, “Oklahoma St.”, “Washington”, “Notre Dame”, “Connecticut”, “St. Johns”, “USC”, “Arizona St.”, “Alabama”, “South Carolina”, “Tennessee”, “Memphis”, “Northern Iowa”)
+looktable1=cbind(teamnames, team)
+for (i in 1:length(cbb20)) if (var1==looktable1[i,1]) varone=looktable1[i,2]
+for (i in 1:length(cbb20)) if (var2==looktable1[i,1]) vartwo=looktable1[i,2]
+if (varone>vartwo) print(paste(var1, "wins!")) else if (vartwo>varone) print(paste(var2, "wins!") ) else print("It is a tie")}
