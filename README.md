@@ -1,2 +1,2 @@
 # NCAA Basketball Winner
- Choose two NCAA Basketball teams and the output will give you a winner!  Download the data file, csv file and R to run this code.  Set the working directory to wherever you save the csv file and have fun with this model!
+Choose two NCAA Basketball teams from the 2020 season and the output will give you a winner!  I created a model that checks to see which team has the better effective field goal percentage, turnover rate, and three point percentage to determine who will win.  Download the data file, csv file and R to run this code.  Set the working directory to wherever you save the csv file on your computer.  Where the inputvalue1 and inputvalue2 are, just make sure to choose two college basketball teams to insert into those values.  
